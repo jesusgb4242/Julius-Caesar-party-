@@ -1,0 +1,127 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #d3bda6;
+    z-index: 3;
+    width: 100%;
+    font-family: "Mate SC", serif;
+}
+
+.navi {
+    background-color: aliceblue;
+}
+
+body {
+    background-image: url('/Users/jesusgarcia/Downloads/Untitled-1.jpg');
+    background-size: cover; /* Ensure the entire image is visible */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center center; /* Center the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invitation {
+    background-color: #7f7164; /* Semi-transparent white background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 420px;
+    position: fixed;
+    z-index: 2;
+    margin-left: 850px;
+    margin-top: 200px;
+    margin-right: 30px;
+    margin-bottom: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.invitation:hover {
+    transform: scale(1.05);
+}
+
+.location-section {
+    text-align: center;
+    margin-left: -80px;
+    font-family: 'Special Elite', cursive;
+    margin-bottom: 600px;
+    margin-right: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    width: 400px;
+    overflow: hidden;
+}
+
+.location-section h1 {
+    border-right: 0.15em solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
+.secret-code-input {
+    width: 20px; /* Small width initially to make it appear as a dot */
+    height: 20px; /* Same height to make it appear as a dot */
+    border-radius: 50%; /* Round shape */
+    border: none;
+    background-color: #c57d4d;
+    transition: width 0.3s, height 0.3s, border-radius 0.3s, padding 0.3s; /* Smooth transition for resizing */
+    overflow: hidden;
+    font-size: 0; /* Adjust the width as needed */
+}
+
+.secret-code-input:hover {
+    width: 80%; /* Expand to a larger width on hover */
+    height: auto; /* Adjust height automatically */
+    border-radius: 5px; /* Change to a rectangle shape */
+    padding: 10px; /* Add padding for the text */
+    font-size: 1.2em; /* Show the placeholder text */
+    border: 1px solid #ccc;
+}
+
+.tittle {
+    font-size: 2em;
+    font-family: "Mate SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+
+.tittle-2 {
+    font-family: "Mate SC";
+    color: #c57d4d;
+    text-decoration: underline;
+    text-shadow: #ffaa1d;
+    font-weight: 400;
+    z-index: 7;
+    font-style: normal;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.details {
+    margin-top: 20px;
+    text-align: left;
+}
+
+p {
+    margin: 10px 0;
+}
+
+
+
+

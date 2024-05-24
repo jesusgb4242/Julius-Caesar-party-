@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="JuliusCaesar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mate+SC&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Elite&display=swap" rel="stylesheet">
+    <title>Julius Caesar Secret Party</title>
+    <script>
+        function caesarCipher(str, shift) {
+            return str.split('').map(char => {
+                if (char.match(/[a-z]/i)) {
+                    const code = char.charCodeAt();
+                    const base = code >= 65 && code <= 90 ? 65 : 97;
+                    return String.fromCharCode(((code - base + shift) % 26) + base);
+                }
+                return char;
+            }).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const location = "The Colosseum";
+            const shift = 3; // Shift value for Caesar Cipher
+            const encryptedLocation = caesarCipher(location, shift);
+            document.getElementById('encrypted-location').textContent = encryptedLocation;
+        });
+    </script>
+</head>
+<body>
+<nav class="navi"></nav>
+<div class="location-section">
+    <h1>enter encrypted code</h1>
+    <input type="text" class="secret-code-input" placeholder="Enter secret code">
+</div>
+<div class="invitation">
+    <h2 class="title">Whispers of Rome</h2>
+    <h1 class="tittle-2">A Night with Caesar</h1>
+    <p>Hail, Honored Guest,</p>
+    <p>You are cordially invited to an exclusive evening of intrigue and celebration, set in the grandeur of ancient Rome. Join us as we pay homage to Julius Caesar and immerse ourselves in the splendor of the Roman Empire.</p>
+    <p>Prepare for a night of secrecy, splendor, and stories untold.</p>
+    <div class="details">
+        <p><strong>Date:</strong> [05/24/2024]</p>
+        <p><strong>Time:</strong> [7:00pm]</p>
+        <p><strong>Attire:</strong> Roman-inspired attire encouraged</p>
+        <p><strong>Location:</strong> <span id="encrypted-location"></span></p>
+        <p>Please RSVP by [05/20/2024] to ensure your place among Rome's elite.</p>
+        <p><strong>RSVP Contact:</strong> [JuliusCaesar@rsvp.com]</p>
+        <p>May the fates favor you, and may Caesar himself look kindly upon your presence.</p>
+    </div>
+</div>
+</body>
+</html>
